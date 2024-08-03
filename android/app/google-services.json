@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "492351428963",
+    "project_id": "hoteltutorial-b6b4b",
+    "storage_bucket": "hoteltutorial-b6b4b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:492351428963:android:78dbe80947681919f11b56",
+        "android_client_info": {
+          "package_name": "com.example.hoteltutorial"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCogW3nKXoOnmrjqryF6TidygHdnw1EXgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
