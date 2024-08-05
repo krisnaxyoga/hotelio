@@ -51,12 +51,12 @@ class MyApp extends StatelessWidget {
           );
         },
         AppRoute.intro: (context) => const IntroPage(),
-        AppRoute.home: (context) => const HomePage(),
+        AppRoute.home: (context) => HomePage(),
         AppRoute.signin: (context) => SigninPage(),
-        AppRoute.detail: (context) => const HomePage(),
-        AppRoute.checkout: (context) => const IntroPage(),
-        AppRoute.checkoutSuccess: (context) => const HomePage(),
-        AppRoute.detailBooking: (context) => const IntroPage(),
+        AppRoute.detail: (context) => HomePage(),
+        AppRoute.checkout: (context) => IntroPage(),
+        AppRoute.checkoutSuccess: (context) => HomePage(),
+        AppRoute.detailBooking: (context) => IntroPage(),
       },
     );
   }

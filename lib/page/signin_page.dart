@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hoteltutorial/config/app_asset.dart';
 import 'package:hoteltutorial/config/app_color.dart';
+import 'package:hoteltutorial/config/app_route.dart';
+import 'package:hoteltutorial/source/user_source.dart';
 import 'package:hoteltutorial/widget/button_custom.dart';
+import 'package:d_info/d_info.dart';
 
 class SigninPage extends StatelessWidget {
   SigninPage({super.key});
@@ -10,7 +13,20 @@ class SigninPage extends StatelessWidget {
   final formkey = GlobalKey<FormState>();
 
   login(BuildContext context) {
-    if (formkey.currentState!.validate()) {}
+    if (formkey.currentState!.validate()) {
+      UserSource.signIn(controllerEmail.text, controllerPassword.text).then(
+        (response) {
+          if (response['success']) {
+            DInfo.dialogSuccess(response['message']);
+            DInfo.closeDialog(actionAfterClose: () {
+              Navigator.pushReplacementNamed(context, AppRoute.home);
+            });
+          } else {
+            DInfo.toastError(response['message']);
+          }
+        },
+      );
+    }
   }
 
   @override
