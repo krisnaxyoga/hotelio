@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:hoteltutorial/config/app_asset.dart';
 import 'package:hoteltutorial/config/app_color.dart';
 import 'package:hoteltutorial/controller/c_home.dart';
+import 'package:hoteltutorial/page/nearby_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
@@ -19,9 +20,9 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Obx(() {
         if (cHome.indexPage == 1) {
-          return const Text('history');
+          return Center(child: const Text('history'));
         }
-        return Text('Near by');
+        return NearbyPage();
       }),
       bottomNavigationBar: Obx(() {
         return Material(
